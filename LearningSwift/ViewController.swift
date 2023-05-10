@@ -49,4 +49,14 @@ class ViewController: UIViewController {
             UIApplication.shared.open(url)
         }
     }
+    @IBAction func btnTapped(_ sender: Any) {
+        //  *** Navigate using storyboard ***
+        
+//        let storyBoard = self.storyboard?.instantiateViewController(withIdentifier: "NewViewController") as! NewViewController
+//        self.navigationController?.pushViewController(storyBoard, animated: true)
+        
+        //  *** Navigate using segue ***
+        self.performSegue(withIdentifier: "newScreen", sender: self)
+    }
+    
 }
